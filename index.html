@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <!-- HOME -->
+      <div class="pages-container" data-page="center" id="home">
+        <div class="navigator navigator-y top">me</div>
+        <div class="navigator navigator-x left">contact</div>
+        <div class="pages-content">
+          <div class="title-contianer">
+            <h1 id="title">
+              Hi there.<br />
+              My name is <span class="name">Ricky.</span><br />
+              A Front-end Developer-to-be.
+            </h1>
+          </div>
+        </div>
+        <div class="navigator navigator-x right">blog</div>
+        <div class="navigator navigator-y bottom">projects</div>
+      </div>
+
+      <!-- PROJECTS -->
+      <div class="pages-container" data-page="top" id="projects">
+        <div class="dead navigator-y top"></div>
+        <div class="dead navigator-x left"></div>
+        <div class="pages-content">top</div>
+        <div class="dead navigator-x right"></div>
+        <div class="navigator navigator-y bottom return">HOME</div>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="pages-container" data-page="right" id="contact">
+        <div class="dead navigator-y top"></div>
+        <div class="navigator navigator-x left return">HOME</div>
+        <div class="pages-content">
+          <h2 id="contact-header">Get in touch now!</h2>
+          <form action="">
+            <input
+              type="text"
+              name="name"
+              class="input-small"
+              placeholder="Name"
+            />
+            <input
+              type="email"
+              name="email"
+              class="input-small"
+              placeholder="Email"
+            />
+            <input
+              type="text"
+              name="subject"
+              class="input-wide"
+              placeholder="Subject"
+            />
+            <textarea
+              name="msg"
+              cols="30"
+              rows="10"
+              placeholder="Message"
+            ></textarea>
+            <input type="submit" value="Send" />
+          </form>
+          <div class="social-media">
+            <a href="#"><i class="fab fa-facebook-square"></i></a><br />
+            <a href="#"><i class="fab fa-instagram"></i></a><br />
+            <a href="#"><i class="fab fa-twitter-square"></i></a><br />
+            <a href="#"><i class="fab fa-github"></i></a><br />
+          </div>
+        </div>
+        <div class="dead navigator-x right"></div>
+        <div class="dead navigator-y bottom"></div>
+      </div>
+
+      <!-- ME -->
+      <div class="pages-container" data-page="bottom" id="me">
+        <div class="navigator navigator-y top return">HOME</div>
+        <div class="dead navigator-x left"></div>
+        <div class="pages-content">
+          <div class="content-container" id="skill-container">
+            <div id="about">
+              <img src="img/profile.JPG" alt="profile picture" />
+              <div>
+                <p>
+                  Hi, my name is Ricky. I'm currently studying Webdevelopment at
+                  Grafisch Lyceum Utrect.
+                </p>
+                <br />
+                <p>
+                  A 19 years old guy that in love with Scripting, Programming,
+                  Photography, and of course Gaming.
+                </p>
+              </div>
+            </div>
+            <div id="skill">
+              <h2>SKILL</h2>
+              <span class="bubbles">html</span>
+              <span class="bubbles">html5</span> <span class="bubbles">css</span
+              ><br />
+              <span class="bubbles">scss</span>
+              <span class="bubbles">javascript</span>
+              <span class="bubbles">react</span><br />
+              <span class="bubbles">react native</span>
+              <span class="bubbles">jquery</span>
+              <span class="bubbles">php</span><br />
+              <span class="bubbles">mysqli</span>
+              <span class="bubbles">pdo</span>
+            </div>
+          </div>
+          <div class="content-container"></div>
+        </div>
+        <div class="dead navigator-x right"></div>
+        <div class="dead navigator-y bottom"></div>
+      </div>
+
+      <!-- blog -->
+      <div class="pages-container" data-page="left" id="blog">
+        <div class="dead navigator-y top"></div>
+        <div class="dead navigator-x left"></div>
+        <div class="pages-content"></div>
+        <div class="navigator navigator-x right return">HOME</div>
+        <div class="dead navigator-y bottom"></div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

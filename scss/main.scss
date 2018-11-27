@@ -1,0 +1,261 @@
+$main-black: #212121;
+$main-white: #bebebe;
+$main-border: 4px $main-white solid;
+$font-std: Roboto, sans-serif;
+$font-scd: Roboto-Mono, monospace;
+
+@import url(https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono);
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+body,
+html {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  margin: 0;
+  padding: 0;
+  background-color: $main-black;
+}
+
+#container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.pages-container {
+  width: 100vw;
+  height: 100vh;
+  color: $main-white;
+  position: relative;
+  .pages-content {
+    background-color: $main-black;
+    display: inline-block;
+    width: 90%;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: $main-border;
+    padding: 5%;
+    font: {
+      family: $font-std;
+      size: 32px;
+    }
+  }
+}
+
+#home {
+  z-index: 10;
+  position: relative;
+  h1 {
+    font-size: 50px;
+    line-height: 75px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-60%);
+    margin-left: 3%;
+    .name {
+      background-color: $main-white;
+      color: $main-black;
+      padding: 0 20px;
+    }
+    .blink {
+      animation: blink 1s steps(2, start) infinite;
+    }
+  }
+}
+#projects {
+  z-index: 10;
+  top: -200%;
+  left: 0%;
+}
+#contact {
+  z-index: 10;
+  top: -200%;
+  left: 100%;
+  .pages-content {
+    justify-content: center;
+    position: absolute;
+
+    h2 {
+      text-align: center;
+      display: block;
+    }
+
+    form {
+      position: relative;
+      margin: 20px auto 0 auto;
+      width: 70%;
+      text-align: center;
+      input,
+      textarea {
+        border: none;
+        margin: 10px 0 0 0;
+        padding: 10px;
+        font: {
+          font-family: $font-scd;
+          size: 20px;
+        }
+      }
+      textarea {
+        width: 92%;
+      }
+      input {
+        height: 40px;
+        width: 92%;
+      }
+      input[type="submit"] {
+        @extend textarea;
+        color: $main-black;
+        cursor: pointer;
+        padding-top: 0;
+        font-size: 30px;
+      }
+    }
+
+    .social-media {
+      text-align: center;
+      position: absolute;
+      padding-top: 0;
+      right: 0;
+      top: 50%;
+      min-width: 162px;
+      transform: translateY(-50%);
+      a {
+        color: $main-white;
+        text-decoration: none;
+      }
+    }
+  }
+}
+#me {
+  z-index: 10;
+  top: -200%;
+  left: 0%;
+  .pages-content {
+    .content-container {
+      width: 50%;
+      height: 100%;
+      margin: 0px;
+      padding: 0px;
+      float: left;
+    }
+    #about {
+      height: 50%;
+      img {
+        width: 50%;
+        float: left;
+        border: 2px solid $main-white;
+        padding: 15px;
+      }
+      div {
+        width: 45%;
+        margin-left: 5%;
+        float: left;
+        font-size: 20px;
+        line-height: 24x;
+      }
+    }
+    #skill {
+      padding-left: 20px;
+      h2 {
+        font-size: 28px;
+        margin : {
+          left: -20px;
+          bottom: 10px;
+        }
+      }
+      .bubbles {
+        position: relative;
+        display: inline-block;
+        font-size: 20px;
+        padding: 5px 10px;
+        border-radius: 8px 8px 8px 0;
+        background-color: $main-white;
+        color: $main-black;
+        margin: {
+          right: 20px;
+          bottom: 10px;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          clip-path: polygon(100% 0, 100% 100%, 0 100%);
+          top: 100%;
+          left: 0;
+          transform: translate(-90%, -100%);
+          background-color: $main-white;
+        }
+      }
+    }
+  }
+}
+#blog {
+  z-index: 10;
+  top: -400%;
+  left: -100%;
+}
+
+.navigator,
+.dead {
+  // display: inline-block;
+  // background-color: white;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  word-break: break-word;
+  letter-spacing: 36px;
+  cursor: pointer;
+  background-color: $main-black;
+  text-transform: uppercase;
+  &:hover {
+    font-size: 55px;
+  }
+  font: {
+    family: $font-scd;
+    size: 50px;
+  }
+}
+
+.navigator-y {
+  width: 90%;
+  height: 10%;
+}
+
+.navigator-x {
+  padding-left: 2%;
+  width: 5%;
+  height: 80%;
+}
+
+.top {
+  top: 0;
+  left: 5%;
+}
+
+.right {
+  top: 10%;
+  left: 95%;
+}
+
+.bottom {
+  top: 90%;
+  left: 5%;
+}
+
+.left {
+  top: 10%;
+  left: 0%;
+}
