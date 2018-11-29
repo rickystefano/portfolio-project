@@ -22,6 +22,7 @@ $(document).ready(function() {
     }
     slide(pageData, targetData, pageTarget);
   });
+  $(document).on("click", ".tags", changeTags);
 });
 function slide(ori, tar, id) {
   var time = 800;
@@ -118,12 +119,10 @@ function slide(ori, tar, id) {
 function typeText(e) {
   $(e).hide();
   var text = $(e).html();
-  console.log(text.length);
   $(e).html("_");
   $(e).show();
   var newText = "";
   function myLoop(i) {
-    console.log(newText);
     setTimeout(function() {
       if (i == text.length) {
         $(e).html(newText + '<span class="blink">_</span>');
@@ -135,4 +134,9 @@ function typeText(e) {
     }, 50);
   }
   myLoop(0);
+}
+
+function changeTags(e) {
+  $(".tags").removeClass("active");
+  $(this).addClass("active");
 }
