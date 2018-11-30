@@ -371,6 +371,10 @@ html {
     transform: translate(-50%, -50%);
     text-align: center;
     i {
+      border-radius: 50%;
+      color: $main-black;
+      background: $main-white;
+      padding: 25px;
       font-size: 80px;
       margin-bottom: 20px;
     }

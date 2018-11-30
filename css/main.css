@@ -288,5 +288,9 @@ html {
   transform: translate(-50%, -50%);
   text-align: center; }
   .building #building-text-container i {
+    border-radius: 50%;
+    color: #212121;
+    background: #bebebe;
+    padding: 25px;
     font-size: 80px;
     margin-bottom: 20px; }
