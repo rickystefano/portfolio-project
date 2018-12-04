@@ -6,6 +6,7 @@ session_start();
   $title = $_REQUEST["title"];
   $desc = $_REQUEST["desc"];
   $tags = $_REQUEST["tags"];
+  $link = $_REQUEST["link"];
 
   if ($_FILES['thumbnail']["tmp_name"] != "") {
     $dir = "../img/thumbnails/";
@@ -23,30 +24,27 @@ session_start();
     $file = "no_thumbnail.jpg";
   }
 
-
-  echo $title . "<br>";
-  echo $desc . "<br>";
-  echo $file . "<br>";
-
-  $query1 = "INSERT INTO pr (pr_name, pr_desc, pr_thumbnail) VALUES (?,?,?)";
+  $query1 = "INSERT INTO pr (pr_name, pr_desc, pr_thumbnail, pr_link) VALUES (?,?,?,?)";
   $stmt1 = $conn->prepare($query1);
-  $stmt1->bind_param('sss', $title, $desc, $file);
+  $stmt1->bind_param('sss', $title, $desc, $file, $link);
   $stmt1->execute();
+  $stmt1->close();
 
-  $query2 = "SELECT pr_id FROM pr WHERE pr_title = ?";
+  $query2 = "SELECT pr_id FROM pr WHERE pr_name = ?";
   $stmt2 = $conn->prepare($query2);
-
   $stmt2->bind_param('s', $title);
   $stmt2->execute();
-  $res->fetch_assoc();
-
-  echo $res;
+  $stmt2->bind_result($res);
+  $stmt2->fetch();
+  $stmt2->close();
 
   for ($i = 0; $i < count($tags); $i++) {
+    $id = $_SESSION[$tags[$i]];
     $query3 = "INSERT INTO pr_tags (pr_tags_pr_id, pr_tags_tags_id) VALUES (?,?)";
-    $stmt3 = prepare($query3);
-    $stmt3->bind_param('is', $res, $_SESSION[$tags[$i]]);
+    $stmt3 = $conn->prepare($query3);
+    $stmt3->bind_param('ii', $res, $id);
     $stmt3->execute();
+    $stmt3->close();
   }
 }
 
@@ -63,6 +61,7 @@ $sql = $conn->query("SELECT * FROM `tags`");
     <form enctype='multipart/form-data' action="" method="post">
       <label for="title">Title: </label><input type="text" name="title" placeholder="Title"><br/>
       <label for="desc">Description: </label><input type="text" name="desc" placeholder="Description"><br/>
+      <label for="desc">Link (based on index.html): </label><input type="text" name="link" placeholder="Link"><br/>
       <label for="tags">Tags: </label><br/>
       <?php
       while ($res = $sql->fetch_assoc()) {
