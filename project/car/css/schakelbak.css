@@ -1,0 +1,165 @@
+/*      LET OP: ONDERSTAANDE CODE IS NATUURLIJK EEN DIKKE VETTE 'WORK AROUND', MAAR HET WERKT...
+        DOE DIT ALLEEN ALS JE BAAS GAAT PIEPEN DAT HET TE LANG DUURT.    ;-)          */
+
+
+/* ANIMATIE */
+
+.pook_start{ animation: STARTUP       0.60s 0s 1 normal forwards ease-in-out; }
+
+.pook_0_-1 { animation: N_TO_REV      1s 0s 1 normal forwards; }
+.pook_0_0  { /* NEGEREN! */ }
+.pook_0_1  { animation: N_TO_ONE      1s 0s 1 normal forwards; }
+.pook_0_2  { animation: N_TO_TWO      1s 0s 1 normal forwards; }
+.pook_0_3  { animation: N_TO_THREE    1s 0s 1 normal forwards; }
+.pook_0_4  { animation: N_TO_FOUR     1s 0s 1 normal forwards; }
+.pook_0_5  { animation: N_TO_FIVE     1s 0s 1 normal forwards; }
+.pook_0_6  { animation: N_TO_SIX      1s 0s 1 normal forwards; }
+
+.pook_1_-1 { animation: ONE_TO_REV    1s 0s 1 normal forwards; }
+.pook_1_0  { animation: ONE_TO_N      1s 0s 1 normal forwards; }
+.pook_1_1  { /* NEGEREN! */ }
+.pook_1_2  { animation: ONE_TO_TWO    1s 0s 1 normal forwards; }
+.pook_1_3  { animation: ONE_TO_THREE  1s 0s 1 normal forwards; }
+.pook_1_4  { animation: ONE_TO_FOUR   1s 0s 1 normal forwards; }
+.pook_1_5  { animation: ONE_TO_FIVE   1s 0s 1 normal forwards; }
+.pook_1_6  { animation: ONE_TO_SIX    1s 0s 1 normal forwards; }
+
+.pook_2_-1 { animation: TWO_TO_REV    1s 0s 1 normal forwards; }
+.pook_2_0  { animation: TWO_TO_N      1s 0s 1 normal forwards; }
+.pook_2_1  { animation: TWO_TO_ONE    1s 0s 1 normal forwards; }
+.pook_2_2  { /* NEGEREN! */ }
+.pook_2_3  { animation: TWO_TO_THREE  1s 0s 1 normal forwards; }
+.pook_2_4  { animation: TWO_TO_FOUR   1s 0s 1 normal forwards; }
+.pook_2_5  { animation: TWO_TO_FIVE   1s 0s 1 normal forwards; }
+.pook_2_6  { animation: TWO_TO_SIX    1s 0s 1 normal forwards; }
+
+.pook_3_-1 { animation: THREE_TO_REV  1s 0s 1 normal forwards; }
+.pook_3_0  { animation: THREE_TO_N    1s 0s 1 normal forwards; }
+.pook_3_1  { animation: THREE_TO_ONE  1s 0s 1 normal forwards; }
+.pook_3_2  { animation: THREE_TO_TWO  1s 0s 1 normal forwards; }
+.pook_3_3  { /* NEGEREN! */ }
+.pook_3_4  { animation: THREE_TO_FOUR 1s 0s 1 normal forwards; }
+.pook_3_5  { animation: THREE_TO_FIVE 1s 0s 1 normal forwards; }
+.pook_3_6  { animation: THREE_TO_SIX  1s 0s 1 normal forwards; }
+
+.pook_4_-1 { animation: FOUR_TO_REV   1s 0s 1 normal forwards; }
+.pook_4_0  { animation: FOUR_TO_N     1s 0s 1 normal forwards; }
+.pook_4_1  { animation: FOUR_TO_ONE   1s 0s 1 normal forwards; }
+.pook_4_2  { animation: FOUR_TO_TWO   1s 0s 1 normal forwards; }
+.pook_4_3  { animation: FOUR_TO_THREE 1s 0s 1 normal forwards; }
+.pook_4_4  { /* NEGEREN! */ }
+.pook_4_5  { animation: FOUR_TO_FIVE  1s 0s 1 normal forwards; }
+.pook_4_6  { animation: FOUR_TO_SIX   1s 0s 1 normal forwards; }
+
+.pook_5_-1 { animation: FIVE_TO_REV   1s 0s 1 normal forwards; }
+.pook_5_0  { animation: FIVE_TO_N     1s 0s 1 normal forwards; }
+.pook_5_1  { animation: FIVE_TO_ONE   1s 0s 1 normal forwards; }
+.pook_5_2  { animation: FIVE_TO_TWO   1s 0s 1 normal forwards; }
+.pook_5_3  { animation: FIVE_TO_THREE 1s 0s 1 normal forwards; }
+.pook_5_4  { animation: FIVE_TO_FOUR  1s 0s 1 normal forwards; }
+.pook_5_5  { /* NEGEREN! */ }
+.pook_5_6  { animation: FIVE_TO_SIX   1s 0s 1 normal forwards; }
+
+.pook_6_-1 { animation: SIX_TO_REV    1s 0s 1 normal forwards; }
+.pook_6_0  { animation: SIX_TO_N      1s 0s 1 normal forwards; }
+.pook_6_1  { animation: SIX_TO_ONE    1s 0s 1 normal forwards; }
+.pook_6_2  { animation: SIX_TO_TWO    1s 0s 1 normal forwards; }
+.pook_6_3  { animation: SIX_TO_THREE  1s 0s 1 normal forwards; }
+.pook_6_4  { animation: SIX_TO_FOUR   1s 0s 1 normal forwards; }
+.pook_6_5  { animation: SIX_TO_FIVE   1s 0s 1 normal forwards; }
+.pook_6_6  { /* NEGEREN! */ }
+
+.pook_-1_-1{ /* NEGEREN! */ }
+.pook_-1_0 { animation: REV_TO_N      1s 0s 1 normal forwards; }
+.pook_-1_1 { animation: REV_TO_ONE    1s 0s 1 normal forwards; }
+.pook_-1_2 { animation: REV_TO_TWO    1s 0s 1 normal forwards; }
+.pook_-1_3 { animation: REV_TO_THREE  1s 0s 1 normal forwards; }
+.pook_-1_4 { animation: REV_TO_FOUR   1s 0s 1 normal forwards; }
+.pook_-1_5 { animation: REV_TO_FIVE   1s 0s 1 normal forwards; }
+.pook_-1_6 { animation: REV_TO_SIX    1s 0s 1 normal forwards; }
+
+/* KEYFRAMES */
+@keyframes STARTUP {
+    0%   { transform: translate(114px,-126px);  }
+    25%  { transform: translate( 88px,-146px);  }
+    75%  { transform: translate(146px,-106px);  }
+    100% { transform: translate(114px,-126px);  }
+}
+
+@keyframes N_TO_ONE       {  0%{transform:translate(114px,-126px)}  50%{transform:translate(88px,-146px)}                                          100%{transform:translate(136px,-187px)}   }
+@keyframes N_TO_TWO       {  0%{transform:translate(114px,-126px)}  50%{transform: translate(88px,-146px)}                                         100%{transform:translate(36px,-106px)}    }
+@keyframes N_TO_THREE     {  0%{transform:translate(114px,-126px)}                                                                                 100%{transform:translate(169px,-170px)}   }
+@keyframes N_TO_FOUR      {  0%{transform:translate(114px,-126px)}                                                                                 100%{transform:translate(66px,-82px)}     }
+@keyframes N_TO_FIVE      {  0%{transform:translate(114px,-126px)}  50%{transform:translate(146px,-106px)}                                         100%{transform:translate(200px,-149px)}   }
+@keyframes N_TO_SIX       {  0%{transform:translate(114px,-126px)}  50%{transform:translate(146px,-106px)}                                         100%{transform:translate(97px,-59px)}     }
+@keyframes N_TO_REV       {  0%{transform:translate(114px,-126px)}  50%{transform:translate(58px,-168px)}                                          100%{transform:translate(-1px,-125px)}    }
+
+@keyframes ONE_TO_N       {  0%{transform:translate(136px,-187px)}  50%{transform:translate(88px,-146px)}                                          100%{transform:translate(114px,-126px)}}
+@keyframes ONE_TO_TWO     {  0%{transform:translate(136px,-187px)}  50%{transform:translate(88px,-146px)}                                          100%{transform:translate(36px,-106px)}}
+@keyframes ONE_TO_THREE   {  0%{transform:translate(136px,-187px)}  33%{transform:translate(88px,-146px)}  66%{transform:translate(114px,-126px)}  100%{transform:translate(169px,-170px)}}
+@keyframes ONE_TO_FOUR    {  0%{transform:translate(136px,-187px)}  33%{transform:translate(88px,-146px)}  66%{transform:translate(114px,-126px)}  100%{transform:translate(66px,-82px)}}
+@keyframes ONE_TO_FIVE    {  0%{transform:translate(136px,-187px)}  33%{transform:translate(88px,-146px)}  66%{transform:translate(146px,-106px)}  100%{transform:translate(200px,-149px)}}
+@keyframes ONE_TO_SIX     {  0%{transform:translate(136px,-187px)}  33%{transform:translate(88px,-146px)}  66%{transform:translate(146px,-106px)}  100%{transform:translate(97px,-59px)}}
+@keyframes ONE_TO_REV     {  0%{transform:translate(136px,-187px)}  33%{transform:translate(88px,-146px)}  66%{transform:translate(58px,-168px)}   100%{transform:translate(-1px,-125px)}}
+
+@keyframes TWO_TO_ONE     {  0%{transform:translate(36px,-106px)}   50%{transform:translate(88px,-146px)}                                          100%{transform:translate(136px,-187px)}}
+@keyframes TWO_TO_N       {  0%{transform:translate(36px,-106px)}   50%{transform:translate(88px,-146px)}                                          100%{transform:translate(114px,-126px)}}
+@keyframes TWO_TO_THREE   {  0%{transform:translate(36px,-106px)}   33%{transform:translate(88px,-146px)}   66%{transform:translate(114px,-126px)} 100%{transform:translate(169px,-170px)}}
+@keyframes TWO_TO_FOUR    {  0%{transform:translate(36px,-106px)}   33%{transform:translate(88px,-146px)}   66%{transform:translate(114px,-126px)} 100%{transform:translate(66px,-82px)}}
+@keyframes TWO_TO_FIVE    {  0%{transform:translate(36px,-106px)}   33%{transform:translate(88px,-146px)}   66%{transform:translate(146px,-106px)} 100%{transform:translate(200px,-149px)}}
+@keyframes TWO_TO_SIX     {  0%{transform:translate(36px,-106px)}   33%{transform:translate(88px,-146px)}   66%{transform:translate(146px,-106px)} 100%{transform:translate(97px,-59px)}}
+@keyframes TWO_TO_REV     {  0%{transform:translate(36px,-106px)}   33%{transform:translate(88px,-146px)}   66%{transform:translate(58px,-168px)}  100%{transform:translate(-1px,-125px)}}
+
+@keyframes THREE_TO_ONE   {  0%{transform:translate(169px,-170px)}  33%{transform:translate(114px,-126px)}  66%{transform:translate(88px,-146px)}  100%{transform:translate(136px,-187px)}}
+@keyframes THREE_TO_TWO   {  0%{transform:translate(169px,-170px)}  33%{transform:translate(114px,-126px)}  66%{transform:translate(88px,-146px)}  100%{transform:translate(36px,-106px)}}
+@keyframes THREE_TO_N     {  0%{transform:translate(169px,-170px)}                                                                                 100%{transform:translate(114px,-126px)}}
+@keyframes THREE_TO_FOUR  {  0%{transform:translate(169px,-170px)}  50%{transform:translate(114px,-126px)}                                         100%{transform:translate(66px,-82px)}}
+@keyframes THREE_TO_FIVE  {  0%{transform:translate(169px,-170px)}  33%{transform:translate(114px,-126px)}  66%{transform:translate(146px,-106px)} 100%{transform:translate(200px,-149px)}}
+@keyframes THREE_TO_SIX   {  0%{transform:translate(169px,-170px)}  33%{transform:translate(114px,-126px)}  66%{transform:translate(146px,-106px)} 100%{transform:translate(97px,-59px)}}
+@keyframes THREE_TO_REV   {  0%{transform:translate(169px,-170px)}  33%{transform:translate(114px,-126px)}  66%{transform:translate(58px,-168px)}  100%{transform:translate(-1px,-125px)}}
+
+@keyframes FOUR_TO_ONE    {  0%{transform:translate(66px,-82px)}    33%{transform:translate(114px,-126px)}  66%{transform:translate(88px,-146px)}  100%{transform:translate(136px,-187px)}}
+@keyframes FOUR_TO_TWO    {  0%{transform:translate(66px,-82px)}    33%{transform:translate(114px,-126px)}  66%{transform:translate(88px,-146px)}  100%{transform:translate(36px,-106px)}}
+@keyframes FOUR_TO_THREE  {  0%{transform:translate(66px,-82px)}    50%{transform:translate(114px,-126px)}                                         100%{transform:translate(169px,-170px)}}
+@keyframes FOUR_TO_N      {  0%{transform:translate(66px,-82px)}                                                                                   100%{transform:translate(114px,-126px)}}
+@keyframes FOUR_TO_FIVE   {  0%{transform:translate(66px,-82px)}    33%{transform:translate(114px,-126px)}  66%{transform:translate(146px,-106px)} 100%{transform:translate(200px,-149px)}}
+@keyframes FOUR_TO_SIX    {  0%{transform:translate(66px,-82px)}    33%{transform:translate(114px,-126px)}  66%{transform:translate(146px,-106px)} 100%{transform:translate(97px,-59px)}}
+@keyframes FOUR_TO_REV    {  0%{transform:translate(66px,-82px)}    33%{transform:translate(114px,-126px)}  66%{transform:translate(58px,-168px)}  100%{transform:translate(-1px,-125px)}}
+
+@keyframes FIVE_TO_ONE    {  0%{transform:translate(200px,-149px)}  33%{transform:translate(146px,-106px)}  66%{transform:translate(88px,-146px)}  100%{transform:translate(136px,-187px)}}
+@keyframes FIVE_TO_TWO    {  0%{transform:translate(200px,-149px)}  33%{transform:translate(146px,-106px)}  66%{transform:translate(88px,-146px)}  100%{transform:translate(36px,-106px)}}
+@keyframes FIVE_TO_THREE  {  0%{transform:translate(200px,-149px)}  33%{transform:translate(146px,-106px)}  66%{transform:translate(114px,-126px)} 100%{transform:translate(169px,-170px)}}
+@keyframes FIVE_TO_FOUR   {  0%{transform:translate(200px,-149px)}  33%{transform:translate(146px,-106px)}  66%{transform:translate(114px,-126px)} 100%{transform:translate(66px,-82px)}}
+@keyframes FIVE_TO_N      {  0%{transform:translate(200px,-149px)}  50%{transform:translate(146px,-106px)}                                         100%{transform:translate(114px,-126px)}}
+@keyframes FIVE_TO_SIX    {  0%{transform:translate(200px,-149px)}  50%{transform:translate(146px,-106px)}                                         100%{transform:translate(97px,-59px)}}
+@keyframes FIVE_TO_REV    {  0%{transform:translate(200px,-149px)}  33%{transform:translate(146px,-106px)}  66%{transform:translate(58px,-168px)}  100%{transform:translate(-1px,-125px)}}
+
+@keyframes SIX_TO_ONE     {  0%{transform:translate(97px,-59px)}    33%{transform:translate(146px,-106px)}  66%{transform:translate(88px,-146px)}  100%{transform:translate(136px,-187px)}}
+@keyframes SIX_TO_TWO     {  0%{transform:translate(97px,-59px)}    33%{transform:translate(146px,-106px)}  66%{transform:translate(88px,-146px)}  100%{transform:translate(36px,-106px)}}
+@keyframes SIX_TO_THREE   {  0%{transform:translate(97px,-59px)}    33%{transform:translate(146px,-106px)}  66%{transform:translate(114px,-126px)} 100%{transform:translate(169px,-170px)}}
+@keyframes SIX_TO_FOUR    {  0%{transform:translate(97px,-59px)}    33%{transform:translate(146px,-106px)}  66%{transform:translate(114px,-126px)} 100%{transform:translate(66px,-82px)}}
+@keyframes SIX_TO_FIVE    {  0%{transform:translate(97px,-59px)}    50%{transform:translate(146px,-106px)}                                         100%{transform:translate(200px,-149px)}}
+@keyframes SIX_TO_N       {  0%{transform:translate(97px,-59px)}    50%{transform:translate(146px,-106px)}                                         100%{transform:translate(114px,-126px)}}
+@keyframes SIX_TO_REV     {  0%{transform:translate(97px,-59px)}    33%{transform:translate(146px,-106px)}  66%{transform:translate(58px,-168px)}  100%{transform:translate(-1px,-125px)}}
+
+@keyframes REV_TO_ONE     {  0%{transform:translate(-1px,-125px)}   33%{transform:translate(58px,-168px)}   66%{transform:translate(88px,-146px)}  100%{transform:translate(136px,-187px)}}
+@keyframes REV_TO_TWO     {  0%{transform:translate(-1px,-125px)}   33%{transform:translate(58px,-168px)}   66%{transform:translate(88px,-146px)}  100%{transform:translate(36px,-106px)}}
+@keyframes REV_TO_THREE   {  0%{transform:translate(-1px,-125px)}   33%{transform:translate(58px,-168px)}   66%{transform:translate(114px,-126px)} 100%{transform:translate(169px,-170px)}}
+@keyframes REV_TO_FOUR    {  0%{transform:translate(-1px,-125px)}   33%{transform:translate(58px,-168px)}   66%{transform:translate(114px,-126px)} 100%{transform:translate(66px,-82px)}}
+@keyframes REV_TO_FIVE    {  0%{transform:translate(-1px,-125px)}   33%{transform:translate(58px,-168px)}   66%{transform:translate(146px,-106px)} 100%{transform:translate(200px,-149px)}}
+@keyframes REV_TO_SIX     {  0%{transform:translate(-1px,-125px)}   33%{transform:translate(58px,-168px)}   66%{transform:translate(146px,-106px)} 100%{transform:translate(97px,-59px)}}
+@keyframes REV_TO_N       {  0%{transform:translate(-1px,-125px)}   50%{transform:translate(58px,-168px)}                                          100%{transform:translate(114px,-126px)}}
+
+
+/* 
+
+N  = 114px,-126px
+R  =  -1px,-125px  58px,-168px                                 114px,-126px
+1  = 136px,-187px  88px,-146px                                 114px,-126px
+2  =  36px,-106px  88px,-146px                                 114px,-126px
+3  = 169px,-170px  114px,-126px
+4  =  66px,-82px   114px,-126px
+5  = 200px,-149px  146px,-106px                                114px,-126px
+6  =  97px,-59px   146px,-106px                                114px,-126px
+
+*/

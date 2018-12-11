@@ -1,0 +1,69 @@
+
+/* IN DIT BESTAND MAG NIKS GEWIJZIGD WORDEN!!!!!! */
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: "Open Sans Condensed";
+	font-size: 1rem;
+	font-weight: 100;
+    font-style: normal;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+#vidFrame{
+	width: 800px;
+	height: 480px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+
+#frameart{
+	display: block;
+	width: 800px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+}
+
+#player{
+	width: 630px;
+	height: 380px;
+	position: absolute;
+	top: 42px;
+	left: 40px;
+}
+
+#remote{
+	width: 200px;
+/*	height: 500px;*/
+	background-color: red;
+	text-align: center;
+	padding: 50px;
+}
+
+button{
+	width: 80px;
+	height: 80px;
+	display: inline-block;
+	margin: 5px;
+}
+
+.contorl {
+	margin: 2px;
+	margin-top: 10px;
+}
+
+.left {
+	border-radius: 50% 0 0 50%;
+}
+
+.right {
+	border-radius: 0 50% 50% 0 ;
+}

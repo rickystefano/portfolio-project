@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,6 +12,14 @@
       integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
       crossorigin="anonymous"
     />
+    <!--
+      <link
+        rel="stylesheet"
+        href="offline/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous"
+      />
+    -->
   </head>
   <body>
     <div id="container">
@@ -39,10 +47,10 @@
         <div class="pages-content">
           <div id="project-nav">
             <ul>
-              <li class="tags active">All</li>
-              <li class="tags">HTML/CSS</li>
-              <li class="tags">PHP</li>
-              <li class="tags">JavaScript</li>
+              <li data-tags="all" class="tags active">All</li>
+              <li data-tags="HTML/CSS" class="tags">HTML/CSS</li>
+              <li data-tags="PHP" class="tags">PHP</li>
+              <li data-tags="JavaScript" class="tags">JavaScript</li>
             </ul>
           </div>
           <div id="projects-container"></div>
@@ -124,7 +132,7 @@
               </div>
             </div>
             <div id="skill">
-              <h2>SKILL</h2>
+              <h2>SKILLS</h2>
               <span class="bubbles">html</span>
               <span class="bubbles">html5</span> <span class="bubbles">css</span
               ><br />
@@ -135,7 +143,7 @@
               <span class="bubbles">jquery</span>
               <span class="bubbles">php</span><br />
               <span class="bubbles">mysqli</span>
-              <span class="bubbles">pdo</span>
+              <span class="bubbles">pdo</span> <span class="bubbles">c#</span>
             </div>
           </div>
           <div class="content-container" id="timeline">
@@ -191,6 +199,7 @@
       </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="./offline/jquery.min.js"></script> -->
     <script src="js/main.js"></script>
   </body>
 </html>

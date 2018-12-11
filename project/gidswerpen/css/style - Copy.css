@@ -1,0 +1,145 @@
+body{margin: 0 auto;}
+nav{position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+  }
+#navbar{
+  float: left;
+  background-color: #3b3b3b;
+  width: 50%;
+  height: 60px;
+  z-index: 1;
+}
+#navbar2{
+  z-index: 2;
+  float: left;
+  width: 50%;
+  background-image: url("../img/navcolor.jpg");
+}
+nav img{
+  width: 15%;
+  float: right;
+  margin-right: 20px;
+}
+li {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  font-size: 1.2em;
+  float: left;
+	width: 100px;
+	height: 60px;
+	-webkit-transform: skew(-15deg );
+	-moz-transform: skew(-15deg);
+	-o-transform: skew(-15deg);
+	background: #00e895;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li a {
+    display: block;
+    width: 100px;
+    height: 24px;
+    color: #fff;
+    padding: 18px 22px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #3b3b3b;
+    color: white;
+}
+.newsblok{
+  margin-top: 4%;
+  height: 80%;
+  display: inline;
+  float: left;
+  background-color: #fff;
+  width:20%;
+  margin-left: 4%;
+  border-radius: 25px;
+  border: 2 2px;
+}
+
+
+.newsblok:hover{
+  margin-top: 4%;
+  height: 82%;
+  display: block;
+  float: left;
+  background-color: #fff;
+  width:22%;
+  margin-left: 4%;
+  border-radius: 25px;
+  border: 2 2px;
+}
+.newsblok img{
+  width: 100%;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+section{
+  background-color: #3b3b3b;
+}
+#news{
+  height: 1000px;
+}
+#gids{
+  height: 1000px;
+}
+#contact{
+  height: 1000px;
+}
+.contactblok{
+  margin-top: 2%;
+  height: 30%;
+  display: inline;
+  float: left;
+  background-color: #e6e6e6;
+  width:80%;
+  margin-left: 10%;
+  border-radius: 25px;
+  border: 2 2px;
+}
+.foto{
+  width: 20%;
+  height: 100%;
+  float: right;
+  background-color: red;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+.gidsblok{
+  margin-top: 2%;
+  height: 20%;
+  display: inline;
+  float: left;
+  background-color: #16d5b8;
+  width:96%;
+  margin-left: 2%;
+  border-radius: 25px;
+  border: 2 2px;
+}
+.maps{
+  width: 16%;
+  height: 100%;
+  float: left;
+  background-color: white;
+  border-radius: 25px;
+}
+#googleMap{
+  z-index: 0;
+}
+#googleMap2{
+  z-index: 0;
+}
+
+#googleMap3{
+  z-index: 0;
+}
+
+#googleMap4{
+  z-index: 0;
+}

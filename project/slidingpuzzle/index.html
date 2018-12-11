@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Slidding Puzzle</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <img src="" alt="" id="img">
+    <div id="container">
+      <canvas id="myCanvas" width="720" height="720"></canvas>
+      <div id="buttons">
+        <button onClick="shuffle(3)" class="layOut">3x3</button>
+        <button onClick="shuffle(4)" class="layOut">4x4</button>
+        <button onClick="shuffle(5)" class="layOut">5x5</button>
+        <button onClick="shuffle(6)" class="layOut">6x6</button>
+        <button onClick="shuffle(7)" class="layOut">7x7</button>
+        <button onClick="shuffle(8)" class="layOut">8x8</button>
+        <button onClick="shuffle(9)" class="layOut">9x9</button>
+        <button onClick="shuffle(100)" class="layOut">10x10</button>
+        <button onClick="complete()" class="layOut">Cheat</button>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/myGame.js"></script>
+    <script type="text/javascript" src="js/checkWinner.js"></script>
+  </body>
+</html>

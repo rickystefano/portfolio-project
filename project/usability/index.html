@@ -1,0 +1,79 @@
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="style.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <section id="copy">
+            <h2>Een knopje waar je een tekst mee kan kopieren</h2>
+            <div id="copy-one">
+                <input type="text" value="'U7LWpHn~7?h.G'@" id="copy-short">
+                <button id="copy-short-button" onclick="copyText('short')">Kopieer!</button>
+            </div>
+            <div>
+                <p id="copy-long">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.</p>
+                <button id="copy-long-button" onclick="copyText('long')">Kopieer tekst!</button>
+            </div>
+            <textarea id="copy-try" rows="15" placeholder="Plak de tekst hier..."></textarea>
+        </section>
+        <section id="clickable-menu">
+            <h2>Klikbaar menu</h2><br>
+            <h3>Probeer de items van beide menu's te klikken. Merk je het verschil?</h3><br>
+            <div id="menu-one" class="clickable-nav">
+                <ul>
+                    <li><a class="isCLicked">Menu</a></li>
+                    <li><a class="isCLicked">Contact</a></li>
+                    <li><a class="isCLicked">About</a></li>
+                    <li><a class="isCLicked">Shop</a></li>
+                </ul>
+            </div>
+            <div id="menu-two" class="clickable-nav">
+                <ul>
+                    <li><a class="isCLicked">Menu</a></li>
+                    <li><a class="isCLicked">Contact</a></li>
+                    <li><a class="isCLicked">About</a></li>
+                    <li><a class="isCLicked">Shop</a></li>
+                </ul>
+            </div>
+            <br>
+            <h3>Gelkikt? <span id="isClicked" class="nee">NEE</span></h3>
+            <br>
+        </section>
+        <section id="autofill">
+            <h2>Autofill</h2>
+            <div id="form1">
+                <form>
+                    <h3>Aan</h3>
+                    Naam: <br>
+                    <input type="text" name="name" autocomplete="on"><br>
+                    Email: <br>
+                    <input type="email" name="email" autocomplete="on"><br>
+                    <input type="submit" value="Herlaad pagina" class="autofill-submit">
+                </form>
+            </div>
+            <div id="form2">
+                <form>
+                    <h3>Uit</h3>
+                    Naam: <br>
+                    <input type="text" name="" autocomplete="of"><br>
+                    Email: <br>
+                    <input type="email" name="" autocomplete="of"><br>
+                    <input type="submit" value="Herlaad pagina" class="autofill-submit">
+                </form>
+            </div>
+            <h3>Autofill is handig en snell. Soms is het onveilig en je wil hem niet hebben.</h3>
+        </section>
+        <section id="auto-top">
+            <h2>"DE AUTO TOP KNOP"</h2>
+            <h3 style="text-align: center;">Wil je terug naar de bovenkant van de pagina gaan? Ik help jou wel.</h3>
+            <img id="auto-knop" src="img/arrow_unactive.png" alt="arrow">
+        </section>
+
+        <script src="main.js"></script>
+    </body>
+</html>
+

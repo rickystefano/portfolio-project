@@ -1,0 +1,84 @@
+
+
+*{
+	font-family: "Arial";
+}
+
+#container{
+	width: 60%;
+	min-width: 500px;
+	max-width: 900px;
+	margin: 5% auto;
+	padding: 15px;
+	background-color: beige;
+	box-shadow: 5px 5px 50px rgba(0,0,0,0.2);
+	border-radius: 10px;
+}
+
+
+#startChat{
+	text-align: center;
+	margin: 10px auto;
+}
+#startChat input[type="submit"]{
+	margin: 30px 0px;
+}
+#startChat input[type="submit"]:hover{
+	cursor: pointer;
+}
+
+h3{
+	float: left;
+}
+#close{
+	float: right;
+	margin-bottom: 10px;
+}
+#allMessagesArea{
+	clear: both;
+	height: 400px;
+	margin: 0% auto;
+	background-color: azure;
+	border-radius: 10px;
+	padding: 10px;
+	overflow-x: auto;
+}
+.chat{
+	margin-bottom: 10px;
+	font-size: 13px;
+}
+.chat span{
+	font-weight: bold;
+}
+
+
+#addMessageArea{
+	margin-top: 20px;
+}
+#addMessageArea::after{
+	content: " ";
+	height: 0px;
+	clear: both;
+	display: block;
+}
+#addMessageArea input[type="text"]{
+	width: calc(100% - 120px);
+	height: 30px;
+	float: left;
+	border-radius: 5px;
+	border: none;
+	resize: none;
+	padding: 10px;
+}
+#addMessageArea input[type="submit"]{
+	width: 80px;
+	height: 50px;
+	float: right;
+	display: block;
+	background-color: brown;
+	color: white;
+}
+#addMessageArea input[type="submit"]:hover{
+	cursor: pointer;
+}
+

@@ -1,0 +1,156 @@
+/* GLOBAL */
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Roboto', sans-serif;
+  text-align: justify;
+}
+
+div#container{
+  width: 100%;
+  max-width: 960px;
+  min-width: 360px;
+  height: auto;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+main, article{
+  width: 100%;
+}
+
+/* HEADER */
+header{
+  width: 100%;
+}
+
+header figure{
+  width: 100%;
+  margin-bottom: 0;
+  position: relative;
+  z-index: -1;
+}
+
+header img{
+  width: 100%;
+  position: absolute;
+}
+
+header h1{
+  text-align: center;
+  color: #fff;
+  vertical-align: middle;
+  font-size: 80px;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+/* NAV */
+nav{
+  width: 100%;
+  background-color: black;
+  font-size: 0;
+  margin-bottom: 1%;
+}
+nav a{
+  display: inline-block;
+  line-height: 50px;
+  width: 33.333333%;
+  text-align: center;
+  font-size: 20px;
+  text-decoration: none;
+  color: #fff;
+}
+nav a#active{
+  text-decoration: underline;
+}
+nav a#icon{
+  display: none;
+}
+nav a:hover{
+  background-color: rgb(126, 126, 126);
+}
+
+/* INDEX-CONTENT */
+main#index-main, article#index-article{
+  clear: both;
+  display: table;
+}
+main#index-main div.main-content-class, article#index-article div.main-article-content-class{
+  display: inline-block;
+  float: left;
+}
+main#index-main div#main-content-left, article#index-article div#main-article-content-right{
+  width:30%;
+}
+main#index-main figure, article#index-article figure{
+  display: inline-block;
+  width: 90%;
+  height: auto;
+}
+main#index-main img, article#index-article img{
+  width: 100%;
+}
+
+article#index-article figure{
+ float: right;
+}
+main#index-main div#main-content-right, article#index-article div#main-article-content-left{
+  width: 70%
+}
+article#index-article div#main-article-content-right{
+  margin-top: 74px;
+}
+
+/* AUDIO */
+main#main-content-audio section{
+  width: 100%;
+}
+
+main#main-content-audio figure{
+  width: 30%;
+  display: inline-block;
+}
+
+main#main-content-audio figure img{
+  width: 100%;
+  height: 100%;
+}
+main#main-content-audio section.main-content-audio-class{
+  margin: 1%;
+  width: 98%
+}
+main#main-content-audio div.main-content-audio-wrapper{
+  display: inline-block;
+  width: 65%;
+  vertical-align: top;
+  margin: 1% 0 0 1%;
+}
+main#main-content-audio div.main-content-audio-wrapper h2{
+  font-size: 40px;
+}
+main#main-content-audio audio{
+  width: 100%;
+  vertical-align: middle;
+  padding-top: 12px;
+}
+
+/* VIDEO */
+figure#main-video{
+  width: 100%;
+}
+
+figure#main-video video{
+  width: 100%;
+}
+
+/* FOOTER */
+footer{
+  width: 99%;
+  display: block;
+  line-height: 15px;
+  height: 45px;
+  background-color: #000;
+  color: #fff;
+  padding-left: 1%;
+}

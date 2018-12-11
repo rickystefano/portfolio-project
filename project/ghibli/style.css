@@ -1,0 +1,74 @@
+*{
+  padding: 0;
+  margin: 0;
+  /* border: 0.1px solid black; */
+  font-family: "Frutiger Neue W02 Thin",Arial,Helvetica,sans-serif;
+  color: white;
+  text-shadow: 5px 5px rgb(64, 64, 64);
+}
+
+body{
+  background-image: url("media/bg.jpg");
+  overflow: hidden;
+}
+
+#main_container{
+  height: 100vh;
+  width: 100vw;
+}
+
+#main_top{
+  width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#main_top h1{
+  font-size: 80px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#main_top img{
+  width: 40%;
+  margin: 20px auto;
+}
+
+#main_content{
+  width: 960px;
+  margin: 0 auto;
+  height: 734.69px;
+}
+
+#main_content video{
+  margin: 0 10%;
+}
+
+div.items_container{
+  display: inline-block;
+  margin: 10px;
+  height: 100px;
+  width: 220px;
+  background-color: white;
+  padding: 0;
+  cursor: pointer;
+}
+
+#main_sub_content{
+  width: 80%;
+  height: 50%;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+#main_sub_content td, span{
+  font-size: 40px;
+  width: 400px;
+  text-shadow: none;
+  color: black;
+  text-shadow: 1px 1px white;
+}
+
+.null{
+  font-style: italic;
+}

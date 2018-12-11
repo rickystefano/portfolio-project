@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Sniglet:800');
+
+@font-face {
+  font-family: CloisterBlack;
+  src: url(font/CloisterBlack.ttf);
+}
+
+@font-face {
+  font-family: Bemio;
+  src: url(font/Bemio.otf);
+}

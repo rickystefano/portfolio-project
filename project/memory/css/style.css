@@ -1,0 +1,121 @@
+#container {
+  width: 500px;
+  margin: 0 auto;
+}
+
+#game {
+  display: inline-block;
+  border: 5px black solid;
+  border-radius: 10px;
+  background-color: black
+}
+
+#game div {
+  display: inline-block;
+  border: 5px solid black;
+  border-radius: 10px 10px 0px 0px;
+  background-color: white
+}
+
+#game div img {
+  height: 112px;
+  width: 112px;
+}
+
+#game div.selected {
+  border: 5px blue solid;
+}
+
+#game div.found {
+  border: 5px solid green !important;
+}
+
+#game div.wrong {
+  border: 5px solid red !important;
+}
+
+#game div.hidden img {
+  opacity: 0;
+}
+
+#game div.selected img {
+  opacity: 1;
+}
+
+.start, .finish, .restart, .cheat, .auto{
+  width: 133px;
+  height: 50px;
+  background-color: white;
+  position: absolute;
+  top: 135px;
+  margin-left: 127px;
+  border-radius: 10px;
+  font-size: 30px;
+  text-align: center;
+  display: none;
+  line-height: 50px;
+  margin-left: -130px;
+  top: 20px;
+  left: 670px;
+  cursor: pointer;
+}
+
+.start{
+  color: blue;
+  border: 5px solid blue;
+  display: inline-block;
+}
+
+.finish{
+  color: green;
+  border: 5px solid green;
+}
+
+.restart{
+  border: 5px solid black;
+}
+
+.auto{
+  border: 5px solid rgb(158, 90, 6);
+  color: rgb(158, 90, 6);
+  top: 450px;
+}
+
+.cheat{
+  border: 5px solid rgb(129, 15, 90);
+  color: rgb(129, 15, 90);
+  top: 525px;;
+}
+
+.cheatOn img{
+  opacity: 1 !important;
+}
+
+#scoreContainer{
+  border: 8px solid black;
+  border-top: 0;
+  font-size: 40px;
+  height: 47px;
+  width: 484px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+}
+
+#score{
+  display: inline-block;
+}
+
+#fail{
+  color: white;
+  border: 10px solid red;
+  border-radius: 15px;
+  font-size: 50px;
+  width: 500px;
+  height: 514px;
+  position: absolute;
+  top: 0;
+  background-color: red;
+  display: none;
+  cursor: pointer;
+}

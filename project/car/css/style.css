@@ -1,0 +1,38 @@
+*           { margin:0; padding:0; border:0; font-size:100%; font:inherit; vertical-align:baseline; }
+html, body  { background-image: url('../img/bg.jpg'); background-repeat: no-repeat; background-size: cover; overflow-y: hidden;}
+img         { -webkit-user-select:none; -khtml-user-select:none; -moz-user-select:none; -o-user-select:none; user-select:none; }
+
+.centered, #voertuig, .dashboard, #brandstof, #snelheid, #toeren, #sm_achtergrond, #sm_wijzer, #contactslot, #cs_achtergrond, #cs_sleutel, #schakelbak, #plaat, #pook { position:absolute; }
+
+
+.invisible      { display:none; }
+.centered       { left: 50%; top: 50%; transform:translate(-50%,-50%); }
+.centered img   { width: 80%; height: 80%; }
+
+#voertuig       { left:55%; top:50%; transform:translate(-50%,-50%); z-index:0; }
+
+.dashboard      { text-align:center; width:732px; height:174px; left:50%; top:100%; transform:translate(-50%,-100%); background-color: #fff; z-index:3; }
+.dashboard div  { display:inline-block; }
+
+#brandstof      { left:0px;   width:183px; height:174px; background-color:#fff; }
+#snelheid       { left:183px; width:183px; height:174px; background-color:#fff; }
+#toeren         { left:366px; width:183px; height:174px; background-color:#fff; }
+#contactslot    { left:549px; width:183px; height:174px; background-color:#fff; }
+
+#brandstof_achtergrond { left:0px; }
+#brandstof_wijzer      { left:0px; transform:translate(-19px, -84px) rotate(44deg); transform-origin:55px 17px; }
+
+#snelheid_achtergrond { left:0px; }
+#snelheid_wijzer      { left:0px; transform:translate(-29px, -102px) rotate(-55deg); transform-origin:84px 16px; }
+
+#toeren_achtergrond { left:0px; }
+#toeren_wijzer      { left:0px; transform:translate(-29px, -102px) rotate(-55deg); transform-origin:89px 18px; }
+
+#contactslot_achtergrond { left:0px; }
+#contactslot_sleutel     { left:0px; transform:translate(0px, -126px) rotate(-119deg); transform-origin:33px 33px; }
+
+#schakelbak { z-index:1; right:0%; bottom:0%; width:345px; height:100%; }
+#plaat      { bottom:0px; }
+#pook       { bottom:0px; z-index:2; transform: translate(114px,-126px);}
+
+#contactslot_old { width:61px;  height:61px;  background-color:#ff0; }

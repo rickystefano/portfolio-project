@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Eindopdracht</title>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Oswald" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script>
+// HIER CODEER JE EEN AJAX REQUEST NAAR VIDS.PHP 
+// ZODAT DE DATABASE UPDATE MET EEN NIEUW VIDEOID
+// ZODRA JE OP EEN BUTTON KLIKT.
+	$(document).ready(function(){
+		$('.button').on('click', function(){
+			changeChannel($(this).val());
+		});
+	});
+		
+	function changeChannel(channel){
+		event.preventDefault();
+		$.ajax({
+			url: 'vids.php',
+			method: 'POST',
+			data: {
+				change: true,
+				channel: channel
+			}
+		});
+	}
+</script>
+</head>
+
+<body>
+<div id="remote">
+	<button class="button" value="fxSTjiE_5V0">1</button>
+	<button class="button" value="YzgTMh21zhI">2</button>
+	<button class="button" value="Qn-13Tpu7vg">3</button>
+	<button class="button" value="HCp_eN6JSac">4</button>
+	<button class="button" value="9V_aN-ynMqI">5</button>
+	<button class="button" value="afS_wDWDnbU">6</button>
+	<button class="button left" value="1">Pause</button>
+	<button class="button right" value="0">Play</button>
+</div>
+</body>
+</html>

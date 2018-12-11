@@ -1,0 +1,15 @@
+#container{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+canvas#myCanvas{
+  background-color: #fff;
+  border: 1px solid black;
+}
+
+div#resetCanvas{
+  border: 1px solid black;
+}

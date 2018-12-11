@@ -1,0 +1,26 @@
+#container{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+canvas#myCanvas{
+  background-color: #fff;
+  border: 1px solid black;
+  z-index: 1
+}
+
+button{
+  width: 60px;
+  height: 30px;
+}
+
+canvas#myCanvasTwo{
+  position: absolute;
+  z-index: 0;
+  top: 0px;
+  left: 0px;
+  border: 1px solid black;
+  /* background-color: black */
+}

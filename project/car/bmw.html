@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<title>BMW</title>
+	<link href='css/style.css' rel='stylesheet'>
+	<link href='css/schakelbak.css' rel='stylesheet'>
+	<link href='css/dashboard.css' rel='stylesheet'>
+	<script type="text/javascript" src="js/dat.gui.min.js"></script>
+</head>
+<body>
+	<audio id="startEngineSound">
+		<source src="snd/start_engine.ogg" type="audio/ogg">
+		<source src="snd/start_engine.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="runningEngineSound">
+		<source src="snd/running_engine.ogg" type="audio/ogg">
+		<source src="snd/running_engine.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="switchingGearSound">
+		<source src="snd/switching.ogg" type="audio/ogg">
+		<source src="snd/switching.mp3" type="audio/mpeg">
+	</audio>
+	<div id='container'>
+		<div id='voertuig' class='centered'>
+			<img src='img/bmw.png'>
+		</div>
+	</div>
+	<div id='schakelbak'>
+		<img src='img/versnellingsbak/achtergrond.png' id='plaat'>
+		<img src='img/versnellingsbak/pook.png' id='pook'>
+	</div>
+	<div id='dashboard' class='dashboard'>
+		<div id='brandstof'>
+			<img src='img/dashboard/brandstof/achtergrond.png' id='brandstof_achtergrond'>
+			<img src='img/dashboard/brandstof/wijzer.png' id='brandstof_wijzer'>
+		</div>
+		<div id='snelheid'>
+			<img src='img/dashboard/snelheid/achtergrond.png' id='snelheid_achtergrond'>
+			<img src='img/dashboard/snelheid/wijzer.png' id='snelheid_wijzer'>
+		</div>
+		<div id='toeren'>
+			<img src='img/dashboard/toeren/achtergrond.png' id='toeren_achtergrond'>
+			<img src='img/dashboard/toeren/wijzer.png' id='toeren_wijzer'>
+		</div>
+		<div id='contactslot'>
+			<img src='img/dashboard/contactslot/achtergrond.png' id='contactslot_achtergrond'>
+			<img src='img/dashboard/contactslot/sleutel.png' id='contactslot_sleutel'>
+		</div>
+	</div>
+  <canvas id="canvas" style='position:absolute; z-index: -10;' width="2000" height="600" class='invisible'></canvas>
+	<script src='js/bmw.js'></script>
+	<script src='js/helpers.js'></script>
+	<script src='js/flame.js'></script>
+</body>
+</html>

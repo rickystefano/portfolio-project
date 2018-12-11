@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis|Open+Sans');
+
+@mixin bg-overlay($value) {
+    &:before{
+        content: "";
+        position: absolute;
+        right: 50%;
+        top: 0;
+        width: 500%;
+        height: 100%;
+        background: $value;
+        z-index: -10;
+    }
+    &:after{
+        content: "";
+        position: absolute;
+        left: 50%; 
+        top: 0;
+        width: 500%;
+        height: 100%;
+        background: $value;
+        z-index: -10;
+    }
+}
+
+$main-green: #709b1d;
+$main-grey: #f3f3f3;
+
+* {
+    font-family: 'Open Sans';
+}
+
+.row {
+    padding: 0 !important;
+}
+
+
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+#container{
+    max-width: 940px;
+    z-index: 10;
+    position: relative;
+    min-height: 100vh;
+}
+
+header {
+    #nav-one{
+        background-color: $main-green;
+        .nav-pills > .active > a{
+            background-color: white !important;
+            color: $main-green !important;
+        }
+        @include bg-overlay($main-green);
+    }
+    #header-banner {
+        h1 {
+            font-family: 'Dosis', 'sans-serif';
+            span {
+                color:$main-green;
+                font-family: inherit;
+            }
+        }
+        a {
+            color:$main-green;
+            text-decoration: none;
+        }
+    }
+    #nav-two{
+        background-color: $main-grey;
+        * {
+        color: $main-green;
+        }
+        .navbar-toggler {
+            width: auto !important;
+        }
+        form button{
+            background: $main-green;
+        }
+        .nav-pills > .active > a{
+            background-color: $main-green !important;
+            color: white !important;
+            position: relative
+        }
+        @include bg-overlay($main-grey)
+    }
+}
+
+#content {
+    position: relative;
+    @include bg-overlay(url("../img/main_bg.png"));
+    #content-header{
+        background: $main-green;
+        color: white;
+    }
+    #content-items-container{
+        #content-banner{
+            .col-sm-8{
+                background: rgba(212,226,181,1);
+                background: linear-gradient(to right, rgba(212,226,181,1) 0%, rgba(226,228,116,1) 48%, rgba(212,226,181,1) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4e2b5', endColorstr='#d4e2b5', GradientType=1 );
+            }
+            .col-sm-4{
+                background: $main-green;
+            }    
+        }
+        .item-cards{
+            position: relative;
+            background: $main-grey;
+            h6{
+                background:white;
+                display: inline-block;
+                width: 90%;
+                font-size: 14px;
+                position: absolute;
+                color: $main-green;
+                left: 50%;
+                top: 80%;
+                transform: translate(-50%, -90%);
+            }
+            i {
+                font-size: 13px;
+                background-color: $main-green;
+                line-height: 20px;
+                border-radius: 20% 20% 0 0;
+            }
+        }
+        #filter {
+            .container {
+                .filter-cards {
+                    * {
+                        padding-left: 36px;
+                    }
+                }    
+                h5 {
+                    color: white;
+                    background-color: $main-green;
+                }    
+                .triangle {
+                    ul {
+                        padding-left: 0;
+                        list-style-type: none;
+                        li { position: relative }
+                        li::before {
+                            content: "";
+                            width: 5px;
+                            height: 10px;
+                            clip-path: polygon(100% 50%, 0 0, 0 99%);
+                            background-color: black;
+                            position: absolute;
+                            top: 50%;
+                            left: 0;
+                            transform: translateY(-50%);
+                            margin-left: 20px;
+                        }
+                    }
+                    li.filter-active {
+                        color: $main-green;
+                        &:before {
+                            background: $main-green
+                        }
+                    }
+                }    
+                .my-checkbox {
+                    .checkbox-label {
+                        display: block;
+                        position: relative;
+                        cursor: pointer;
+                        user-select: none;
+                    }
+                    .checkbox-label input {
+                        position: absolute;
+                        opacity: 0;
+                        cursor: pointer;
+                        height: 0;
+                        width: 0;
+                    }
+                    .checkmark {
+                        padding: 0;
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                        margin-left: 15px;
+                        height: 8px;
+                        width: 8px;
+                        background-color: white;
+                        border: white 1px solid;
+                        outline: $main-green 2px solid;
+                    }
+                    .checkbox-label:hover input ~ .checkmark {
+                        background-color: $main-green;
+                    }
+                    .checkbox-label input:checked ~ .checkmark {
+                        background-color: $main-green;
+                    }                
+                }
+            }
+            .my-ad {
+                height: 100px;
+                background-color: $main-grey
+            }
+        }
+    }
+    #promotion {
+        position: relative;
+        @include bg-overlay($main-green);
+        &:after{ z-index: -9 }
+        height: 100px;
+        .card-container {
+            .card-content {
+                background-color: #83b228;
+                i { font-size: 35px };
+                div { vertical-align: top; }
+            }
+        }
+    }
+    #brand {
+        h3 {
+            background:$main-green;
+        }
+    }
+}
+footer{
+    h4 {color: $main-green; font-size: 18px; }
+    p { font-size: 13px; margin-bottom: 0; margin-left: 20px; position: relative; }
+    i {
+        position: absolute;
+        top: 50%;
+        left: -20px;
+        transform: translateY(-50%)
+    }
+    #list{
+        position: relative;
+        @include bg-overlay(#f1f1f1);
+        ul {
+            padding-left: 20px;
+            list-style-type: none;
+            li { position: relative; font-size: 13px; line-height: 22px }
+            li::before {
+                content: "";
+                width: 5px;
+                height: 10px;
+                clip-path: polygon(100% 50%, 0 0, 0 99%);
+                background-color: black;
+                position: absolute;
+                top: 50%;
+                left: -36px;
+                transform: translateY(-48%);
+                margin-left: 20px;
+            }
+        }
+    }
+    #footer-icons {
+        position: relative;
+        @include bg-overlay(#e0e0e0);
+        button {
+            background-color: $main-green;
+            color: white;
+        }
+    }
+    #copy {
+        position: relative;
+        @include bg-overlay($main-green);
+        h5 { color: #aed660 }
+    }
+}
+// detail
+#item-container {
+    .border-on, .detail-thumbnails:hover {
+        border: 1px $main-green solid;
+        cursor: pointer;
+    }
+    img.detail-thumbnails {
+        box-sizing: content-box
+    }
+    h2 {
+        color: $main-green;
+        font-size: 40px
+    }
+    i {
+        font-size: 25px;
+        background-color: $main-green;
+        border-radius: 20%;
+        line-height: 40px;
+        padding: 0 4px;
+    }
+    #price-container {
+        background-color: $main-grey;
+        h4 { font-size: 50px }
+        button {
+            background-color: $main-green;
+            color:white;
+        }
+    }
+}
+#beschrijving {
+    h4 {
+        border-bottom: 2px $main-green solid;
+        color: $main-green;
+    }
+}

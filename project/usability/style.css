@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400');
+
+#copy h2,
+#autofill h2,
+#clickable-menu h2,
+#auto-top h2
+{
+    font-size: 25px;
+    line-height: 30px;
+    margin: 10px 0;
+    text-align: center
+}
+
+:root {
+    --main-color: #00ffff;
+    --secondary-color: #00cbff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+}
+
+body {
+    max-width: 1360px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+#copy div, #autofill div {
+    display: inline-block;
+    width: 45%;
+    margin: 10px 2%;
+    vertical-align: top;
+    position: relative
+}
+
+#copy button, #autofill .autofill-submit{
+    margin-top: 20px;
+    border: none;   
+    background-color: var(--main-color);
+    text-align: center;
+    padding: 7px;
+    width: 100%;
+    font-size: 20px;
+    line-height: 30px;
+    cursor: pointer;
+    border-radius:10px;
+}
+
+#copy button:hover, #autofill .autofill-submit:hover {
+    background-color: var(--secondary-color)
+}
+
+#copy #copy-short {
+    width: 100%;
+    height: 40px;
+    padding: 6px;
+}
+
+#copy #copy-try {
+    width: 90%;
+    margin: 20px 5%;
+}
+
+.copy-helper{
+    position: absolute;
+}
+
+#clickable-menu {
+    overflow: auto;
+}
+
+#clickable-menu div {
+    width: 90%;
+    overflow: auto;
+    margin: 10px 5%;
+    color: #303030;
+    background-color: var(--main-color); 
+}
+
+#clickable-menu ul {
+    float: left;
+}
+
+#clickable-menu ul li {
+    border-right: #303030 1px solid;
+    float: left;
+    list-style-type: none;
+}
+
+#clickable-menu ul li:hover {
+    background-color: var(--secondary-color);
+}
+
+#clickable-menu a {
+    cursor: pointer;
+}
+
+#menu-one a {
+    font-size: 20px;
+    line-height: 54px;
+    margin: 0 15px;
+}
+
+#menu-two a {
+    font-size: 20px;
+    display: block;
+    padding: 15px;
+}
+
+#clickable-menu h3, #auto-top h3{
+    margin-left: 5%;    
+}
+
+#clickable-menu .nee {
+    color: #f00;
+}
+
+#clickable-menu .ja {
+    color: #0f0;
+}
+
+#auto-top img {
+    display: block;
+    margin: 20px auto;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#autofill div  {
+    width: 20%;
+}
+
+#autofill #form1{
+    margin-left: 29%;
+    margin-right: 0;
+    margin-bottom: 50px;
+}
+
+#autofill #form2{
+    margin-left: 7%;
+    margin-right: 22%;
+    margin-bottom: 50px;
+}
+
+#autofill h3 {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#autofill form h3 {
+    font-size: 25px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    margin-bottom: 7px;
+}
+
+#autofill input {
+    width: 100%;
+}
+
+#autofill .autofill-submit {
+    margin-top: 10px;
+    width: 100%;
+    border: none;
+}

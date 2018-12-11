@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdracht 2</title>
+    <style media="screen">
+      * {
+        padding: 0;
+        margin: 0;
+        font-size: 50px;
+        font-family: Helvetica;
+      }
+
+      h2 {
+        color: #000;
+        line-height: 80vh;
+        text-align: center;
+      }
+
+      #container {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+      }
+
+      .divjes {
+        height: 80%;
+        position: absolute;
+        top: 10%;
+        display: inline-block;
+        width: 35%;
+        border: 1px solid black;
+        cursor: pointer;
+      }
+
+      #one {
+        left: 10%
+      }
+
+      #two {
+        right: 10%
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="divjes" id="one" onclick="window.location.href = 'codeadaptive/index.html';"><h2>ADAPTIVE</h2></div>
+      <div class="divjes" id="two" onclick="window.location.href = 'coderesponsive/index.html';"><h2>RESPONSIVE</h2></div>
+    </div>
+  </body>
+</html>

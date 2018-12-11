@@ -21,12 +21,12 @@ session_start();
       echo '</pre>';
     }
   } else {
-    $file = "no_thumbnail.jpg";
+    $file = "no_thumbnail.png";
   }
 
   $query1 = "INSERT INTO pr (pr_name, pr_desc, pr_thumbnail, pr_link) VALUES (?,?,?,?)";
   $stmt1 = $conn->prepare($query1);
-  $stmt1->bind_param('sss', $title, $desc, $file, $link);
+  $stmt1->bind_param('ssss', $title, $desc, $file, $link);
   $stmt1->execute();
   $stmt1->close();
 
@@ -58,6 +58,7 @@ $sql = $conn->query("SELECT * FROM `tags`");
     <title>Ricky's Dashboard</title>
   </head>
   <body>
+    <h2>Projects</h2>
     <form enctype='multipart/form-data' action="" method="post">
       <label for="title">Title: </label><input type="text" name="title" placeholder="Title"><br/>
       <label for="desc">Description: </label><input type="text" name="desc" placeholder="Description"><br/>

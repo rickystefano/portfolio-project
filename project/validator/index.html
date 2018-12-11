@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <title>Voel hier je titel in</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <header></header>
+      <section>
+        <form>
+          <fieldset>
+            <legend>Contact formulier</legend>
+
+            <label for="naam">Naam: </label>
+            <input type="text" name="naam" placeholder="Je naam:" id="naam" />
+            <span></span><br />
+
+            <label for="email">E-mailadres:</label>
+            <input type="email" id="email" placeholder="Je e-mailadres" />
+            <span></span><br />
+
+            <label for="wachtwoord">wachtwoord:</label>
+            <input
+              type="password"
+              id="wachtwoord"
+              placeholder="Je wachtwoord"
+            />
+            <span></span><br />
+
+            <label for="wachtwoord_herhalen">wachtwoord herhalen:</label>
+            <input
+              type="password"
+              id="wachtwoord_herhalen"
+              placeholder="Je wachtwoord herhalen"
+            />
+            <span></span><br />
+
+            <input type="submit" id="btnVerzend" value="Verstuur bericht" />
+          </fieldset>
+        </form>
+      </section>
+      <aside></aside>
+      <footer></footer>
+    </div>
+
+    <script src="jquery-3.1.1.js"></script>
+    <script>
+      $(document).ready(function() {
+        $("#naam").on("blur", function() {
+          //als de focus van het input veld af gaat
+          var input = $(this); // maak een variable aan met de naam input
+          var is_name = input.val().length >= 3;
+          // kijkt of het input element een warde heeft van minimaal 5 tekens
+          // roep de valideer-functie aan, en geef hieraan mee:
+          // 1. het element waar het om draait
+          // 2. of het element goed ingevuld is of niet
+          // 3. welke melding er moet komen als het veld niet goed ingevuld is
+          valideer(input, is_name, "Minimaal aantal tekens: 5");
+        });
+
+        $("#email").on("blur", function() {
+          var input = $(this);
+          // Dit is een zogeheten RegularExpression code, het controleert de invoer aan de
+          // hand van reeks controle-codes
+          var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+          // kijkt of het ingevoerde emailadres klopt volgens de RegullarExpression code-reeks
+          var is_email = re.test(input.val());
+          // roep de valideer functie aan, en geef hieraan mee:
+          // 1. het element waar hrt om draait
+          // 2. of het element goed ingevuld is of niet
+          // 3. welke melding er moet komen als het veld niet goed ingevuld is
+          valideer(input, is_email, "Ongeldig e-mailadres");
+        });
+
+        $("#wachtwoord").on("blur", function() {
+          var input = $(this);
+          var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{5,}$/;
+          var is_geldig_wachtwoord = re.test(input.val());
+          valideer(input, is_geldig_wachtwoord, "test");
+          $("#wachtwoord_herhalen").blur();
+        });
+
+        $("#wachtwoord_herhalen").on("blur", function() {
+          var input = $(this);
+          var is_geldig_herhaalwachtwoord =
+            input.val() != "" && input.val() == $("#wachtwoord").val();
+          valideer(
+            input,
+            is_geldig_herhaalwachtwoord,
+            "Wachtwoord komen niet overeen"
+          );
+        });
+
+        function valideer(input, status, bericht = "") {
+          if (status) {
+            // als het veld gevalideerd is, en dus correct is ingevuld volgens de regels
+            // geef het input veld de classname: correct
+            // en haal de classname: incorrect ervanaf
+            input.removeClass("error").addClass("correct");
+            // zoek het dichtsbijzijndste <span> element wat bij het input-element ligt
+            // haal hier de class: error ervanaf
+            // voeg hier ed class: correct aan toe
+            input
+              .next("span")
+              .removeClass("error")
+              .addClass("correct")
+              .html("");
+          } else {
+            // als het veld NIET gevalideerd is, en dus NIET correct is ingevuld volgens de regels
+            // geef het input veld de classname: error
+            // en haal de classname: correct ervanaf
+            input.removeClass("correct").addClass("error");
+            // zoek het dichtsbijzijndste <span> element wat bij het input-element ligt
+            // haal hier de class: correct vanaf
+            // voeg hier de class: error aan toe
+            input
+              .next("span")
+              .removeClass("correct")
+              .addClass("error")
+              .html(bericht);
+          }
+        }
+
+        $("#btnVerzend").click(function() {
+          $("input").blur(); // refresh alle input elementen
+          if ($("input").hasClass("error")) {
+            // als een input-element een error bevat
+            return false; // stop met het versturen van het formulier
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

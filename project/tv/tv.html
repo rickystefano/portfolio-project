@@ -1,0 +1,72 @@
+<!doctype html>
+<!-- IN DIT BESTAND MAG NIKS GEWIJZIGD WORDEN!!! -->
+<html lang="en">
+<head>
+<title>Eindopdracht</title>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Oswald" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://www.youtube.com/iframe_api" type="text/javascript"></script>
+<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script src="js/script.js" type="text/javascript"></script>
+<script>
+// Player READY callback.
+function onPlayerReady(event) {
+	
+	// HIER CODEER JE EEN AJAX REQUEST NAAR VIDS.PHP
+	// WAARMEE JE DE VIDEOID UIT DE DATABASE ONTVANGT
+	// EN LAAT AFSPELEN VIA: player.loadVideoById( 'VIDEOID' );
+	// DIT SCRIPT VOER JE ELKE SECONDE UIT.
+	
+	// player.loadVideoById( 'fxSTjiE_5V0' );
+
+	var videoStatus = new Object;
+	videoStatus.url = "";
+	videoStatus.isPaused = 0;
+	var loadVideo = setInterval(function(){
+		checkUrl();
+	}, 500);
+
+	function checkUrl(){
+		$.ajax({
+			url: 'vids.php',
+			method: 'POST',
+			dataType: 'json',
+			data: {
+				update: true
+			},
+			success: function(result) {
+				// console.log(result.isPaused);
+				
+				// var result = JSON.parse(xresult);
+
+				console.log(result);
+
+				if (videoStatus.url != result.url) {
+					videoStatus.url = result.url;
+					videoStatus.isPaused = 0;
+					console.log(videoStatus.url)
+					player.loadVideoById(videoStatus.url);
+				}
+
+				if (videoStatus.isPaused != result.isPaused) {
+					videoStatus.isPaused = result.isPaused;
+					console.log(videoStatus.isPaused);
+					if (videoStatus.isPaused == 0) 
+						player.playVideo();
+					if (videoStatus.isPaused == 1) 
+						player.pauseVideo();
+				}
+			}
+		})
+		// console.log(videoStatus.isPaused);
+	}
+}
+</script>
+</head>
+<body>
+<div id="vidFrame">
+	<img src="imgs/tv.png" id="frameart">
+	<div id="player"></div>
+</div>
+</body>
+</html>

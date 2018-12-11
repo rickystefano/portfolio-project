@@ -1,11 +1,22 @@
 $(document).ready(function() {
+  //typer title
   typeText("#title");
+  changeTags();
+
+  //navigator
   var center = {
     top: "bottom",
     right: "left",
     bottom: "top",
     left: "right"
   };
+
+  //project href
+  $(document).on("click", ".projects-item", function() {
+    var target = this.dataset.target;
+    window.open(target, "blank_").focus();
+  });
+
   $(document).on("click", ".navigator", function(e) {
     var targetData, pageTarget;
     var pageData = e.target.parentNode.dataset.page;
@@ -22,6 +33,8 @@ $(document).ready(function() {
     }
     slide(pageData, targetData, pageTarget);
   });
+
+  //tags
   $(document).on("click", ".tags", changeTags);
 });
 function slide(ori, tar, id) {
@@ -136,7 +149,23 @@ function typeText(e) {
   myLoop(0);
 }
 
-function changeTags(e) {
-  $(".tags").removeClass("active");
-  $(this).addClass("active");
+function changeTags(begin = null) {
+  const tags = begin == null ? "all" : $(this).data("tags");
+  const cont = document.getElementById("projects-container");
+
+  if (begin != null) {
+    $(".tags").removeClass("active");
+    $(this).addClass("active");
+  }
+
+  $.ajax({
+    url: "./dash/function.php",
+    method: "POST",
+    data: {
+      action: "project",
+      tags: tags
+    }
+  }).done(function(res) {
+    cont.innerHTML = res;
+  });
 }

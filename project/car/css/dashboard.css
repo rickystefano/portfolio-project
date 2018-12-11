@@ -1,0 +1,37 @@
+.plankgas { animation: PLANKGAS 1.0s 0s 1 normal forwards ease-in-out; }
+@keyframes PLANKGAS {      0% { transform:translate(-29px,-102px) rotate(-55deg) }
+                         100% { transform:translate(-29px,-102px) rotate(230deg) }}
+
+.volletank { animation: VOLLETANK 1.0s 0s 1 normal forwards ease-in-out; }
+@keyframes VOLLETANK {     0% { transform:translate(-19px,-84px) rotate(44deg) }
+                         100% { transform:translate(-19px,-84px) rotate(128deg) }}
+
+.volletoeren { animation: VOLLETOEREN 1.0s 0s 1 normal forwards ease-in-out; }
+@keyframes VOLLETOEREN {   0% { transform:translate(-31px,-100px) rotate(-30deg) }
+                         100% { transform:translate(-31px,-100px) rotate(201deg) }}
+
+.contactstart { animation: CONTACTSTART 0.25s 0s 1 normal forwards ease-in-out; }
+@keyframes CONTACTSTART {   0% { transform:translate(0px,-126px) rotate(-119deg) }
+                          100% { transform:translate(0px,-126px) rotate(-56deg) }}
+
+.contactstop { animation: CONTACTSTOP 0.5s 0s 1 normal forwards ease-in-out; }
+@keyframes CONTACTSTOP {   0% { transform:translate(0px,-126px) rotate(-56deg) }
+                          100% { transform:translate(0px,-126px) rotate(-119deg) }}
+
+.trillen { animation: TRILLEN 0.1s 0s infinite normal forwards linear; }
+@keyframes TRILLEN {   0% { transform:translate(-50%,-50%) rotate( 0deg) }
+                      25% { transform:translate(-50%,-50%) rotate(-1deg) }
+                      75% { transform:translate(-50%,-50%) rotate( 1deg) }
+                     100% { transform:translate(-50%,-50%) rotate( 0deg) }}
+
+ /* .volletank_reverse { animation: VOLLETANK_REVERSE 1.0s 0s 1 normal forwards ease-in-out; }
+ @keyframes VOLLETANK_REVERSE {     0% { transform:translate(-19px,-84px) rotate(128deg) }
+                          100% { transform:translate(-19px,-84px) rotate(44deg) }} */
+
+.plankgas_reverse { animation: PLANKGAS_REVERSE 1.0s 0s 1 normal forwards ease-in-out; }
+@keyframes PLANKGAS_REVERSE {      0% { transform:translate(-29px,-102px) rotate(230deg) }
+                         100% { transform:translate(-29px,-102px) rotate(-55deg) }}
+
+ .volletoeren_reverse { animation: VOLLETOEREN_REVERSE 1.0s 0s 1 normal forwards ease-in-out; }
+ @keyframes VOLLETOEREN_REVERSE {   0% { transform:translate(-31px,-100px) rotate(201deg) }
+                          100% { transform:translate(-31px,-100px) rotate(-30deg) }}
