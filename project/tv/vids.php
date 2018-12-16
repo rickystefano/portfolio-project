@@ -1,10 +1,10 @@
 <?php
 
 // DB connect.
-$dbname = 'u528101_p5eind';
-$dbuser = 'u528101_p5eind';
-$dbpass = 'Asus1309';
-$dbhost = 'localhost';
+$dbname = '';
+$dbuser = '';
+$dbpass = '';
+$dbhost = '';
 
 $dbconn = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
 

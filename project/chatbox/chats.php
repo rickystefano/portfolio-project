@@ -1,8 +1,8 @@
 <?php
 // Connect PDO.
-$db_name = 'u528101_chatbox';
-$db_user = 'u528101_chatbox';
-$db_pass = 'Asus1309';
+$db_name = '';
+$db_user = '';
+$db_pass = '';
 $db = new PDO('mysql:host=localhost;dbname='.$db_name, $db_user, $db_pass);
 
 $room = (int)$_REQUEST['server'];
